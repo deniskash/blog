@@ -7,7 +7,7 @@
         :post="post"
         :key="post.id"
         @remove="$emit('remove', post)"
-        />
+      />
     </div>
       <h2 v-else style="color: firebrick">
         Post List Empty

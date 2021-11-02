@@ -25,14 +25,14 @@ export default {
       this.$emit('update:show', false)
     }
   },
-  mounted() {
-    document.addEventListener('click', (e) => {
-      console.log(e.target.className)
-      if (e.toElement.className !== 'select-input') {
-        //comm
-      }
-    })
-  }
+  // mounted() {
+  //   document.addEventListener('click', (e) => {
+  //     console.log(e.target.className)
+  //     if (e.toElement.className !== 'select-input') {
+  //       //comm
+  //     }
+  //   })
+  // }
 }
 </script>
 

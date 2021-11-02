@@ -1,17 +1,27 @@
 <template>
 <div>
   <div class="post">
-    <div>
-      <div><strong>Title:</strong> {{post.title}}</div>
+<!--    <router-link to="/" >-->
+<!--      <div><strong>Title:</strong> {{post.title}}</div>-->
 <!--      <div><strong>Описание:</strong> {{post.body}}</div>-->
+<!--    </router-link>-->
+
+    <div class="info-id-main">
+      <div class="info-id">{{ post.id }}</div>
+      <div><strong>Title:</strong> {{ post.title }}</div>
     </div>
+
     <div>
+
     <div class="post__btns">
-      <my-button>
-        Open
+      <my-button
+          @click="$router.push(`/posts/${post.id}`)"
+      >
+        Open Post
       </my-button>
     </div>
     <div class="post__btns">
+
     <my-button
           @click="$emit('remove', post)"
       >
@@ -40,6 +50,14 @@ export default {
 </script>
 
 <style scoped>
+
+.info-id {
+  text-align: start;
+  font-weight: bold
+}
+
+.info-id-main {
+}
 
 .post {
   padding: 15px;

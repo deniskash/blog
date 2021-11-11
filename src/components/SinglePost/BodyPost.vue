@@ -3,7 +3,19 @@
 
     <div class="body-post">
 
-        <div><strong>Title:</strong> {{ body_post.body }}</div>
+      <div class="body-post-title">
+        <div>{{ body_post.title }}</div>
+      </div>
+
+      <div class="body-post-small-info">
+        <p>
+          OCTOBER 7, 2021 JUMP TO RECIPE, COMMENTS
+        </p>
+      </div>
+
+      <div class="body-post-body">
+        <div>{{ body_post.body }}</div>
+      </div>
 
     </div>
 

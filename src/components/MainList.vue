@@ -1,30 +1,37 @@
 <template>
   <div class="main-list">
 
-    <h1>Page with Posts</h1>
+<!--    <h1>Page with Posts</h1>-->
     <!--    <my-button-->
     <!--        @click="fetchPosts"-->
     <!--    >-->
     <!--      Get Posts-->
     <!--    </my-button>-->
 
-    <my-button
-        @click="showDialog"
-        style="margin: 15px 0;"
-    >
-      Create Post
-    </my-button>
+<!--    <my-button-->
+<!--        @click="showDialog"-->
+<!--        style="margin: 15px 0;"-->
+<!--    >-->
+<!--      Create Post-->
+<!--    </my-button>-->
 
-    <my-dialog  :show="dialogVisible">
-      <post-form
-          @create="createPost"
-      />
-    </my-dialog>
+<!--    <my-dialog  :show="dialogVisible">-->
+<!--      <post-form-->
+<!--          @create="createPost"-->
+<!--      />-->
+<!--    </my-dialog>-->
+
+<!--    <main-photo-->
+<!--        :main_photos="main_photos"-->
+<!--    />-->
+
 
     <post-list
         :posts="posts"
-        @remove="removePost"
-    />
+    >
+    </post-list>
+
+
 
   </div>
 </template>
@@ -32,35 +39,37 @@
 
 <script>
 
-import PostForm from "@/components/PostForm";
 import PostList from "@/components/PostList";
-import MyButton from "@/components/UI/MyButton";
-import MyDialog from "@/components/UI/MyDialog";
+
 import axios from 'axios';
+// import MainPhoto from "@/components/MainPhotos";
 
 
 export default {
   components: {
-    PostList, PostForm, MyDialog, MyButton,
+    // MainPhoto,
+    PostList,
   },
   name: 'MainList',
   data() {
     return {
       posts: [],
-      dialogVisible: false,
+      main_photos: [],
+      // dialogVisible: false,
     }
   },
   methods: {
-    createPost(post) {
-      this.posts.push(post);
-      this.dialogVisible = false;
-    },
-    removePost(post) {
-      this.posts = this.posts.filter(p => p.id !== post.id)
-    },
-    showDialog() {
-      this.dialogVisible = true;
-    },
+    // createPost(post) {
+    //   this.posts.push(post);
+    //   this.dialogVisible = false;
+    // },
+    // removePost(post) {
+    //   this.posts = this.posts.filter(p => p.id !== post.id)
+    // },
+    // showDialog() {
+    //   this.dialogVisible = true;
+    // },
+
     async fetchPosts() {
       try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');

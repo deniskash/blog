@@ -1,42 +1,32 @@
 <template>
   <div class="app">
-    <div id="nav">
-      <h2>
-        <router-link to="/main-list">MainList</router-link>
-      </h2>
+
+    <div id="nav" class="navi">
+      <div class="app-logo">
+        <img class="img-logo"
+          src="https://inlnk.ru/Pmk4L"
+          alt="logo">
+      </div>
+
+      <div class="app-links">
+        <h3>
+          <router-link to="/main-list" class="router-link">MAIN LIST</router-link>
+          <router-link to="/main-photos" class="router-link">Surprise me!</router-link>
+          <router-link to="/post-list-ver-2" class="router-link">Recipes</router-link>
+          <router-link to="/main-list" class="router-link">best OF</router-link>
+          <router-link to="/main-list" class="router-link">BOOKS</router-link>
+          <router-link to="/main-list" class="router-link">NEWSLETTER</router-link>
+          <router-link to="/main-list">MORE</router-link>
+        </h3>
+      </div>
       <router-view/>
+
+
     </div>
   </div>
 
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "./style/style.scss";
 </style>

@@ -15,11 +15,11 @@ export default {
 <style scoped>
 
 .btn {
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
-  cursor: pointer;
+  /*padding: 10px 15px;*/
+  /*background: none;*/
+  /*color: teal;*/
+  /*border: 1px solid teal;*/
+  /*cursor: pointer;*/
 }
 
 

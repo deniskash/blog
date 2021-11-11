@@ -15,13 +15,17 @@ export default {
 <style scoped>
 
 .btn {
-
-  margin-top: 7px;
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
+  height: 80%;
   cursor: pointer;
+  background: repeating-linear-gradient(45deg, #f0f1f4, #f0f1f4 1px, white 1px, white 6px);
+  text-transform: uppercase;
+  border: 1px solid #a6adbf;
+  color: #6B7794;
+  font-weight: bold;
+  padding: 15px;
+  width: 200px;
+  box-sizing: border-box;
+  margin-top: 5px;
 }
 
 

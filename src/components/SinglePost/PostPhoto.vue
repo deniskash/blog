@@ -62,12 +62,10 @@ export default {
 
 <style scoped>
 
-/*.photo {*/
-/*  padding: 15px;*/
-/*  border: 2px solid teal;*/
-/*  margin-top: 15px;*/
-/*  text-align: start;*/
-/*  justify-content: space-between;*/
-/*}*/
+.photo {
+  width: 600px;
+  text-align: start;
+
+}
 
 </style>

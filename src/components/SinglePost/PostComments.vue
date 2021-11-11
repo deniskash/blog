@@ -1,18 +1,23 @@
 <template>
-  <div>
+  <div class="post-comments">
 
     <div>
-      <h4>
-        Comments
-      </h4>
+      <div class="post-comments-h4">
+        <h4>
+          Comments
+        </h4>
+      </div>
+        <div class="comments" v-for="comment in comments" :key="comment" >
 
-        <div class="comments" v-for="comment in comments" :key="comment">
-<!--          <div><strong>postId:</strong> {{ comment.postId }}</div>-->
-<!--          <div><strong>id:</strong> {{ comment.id }}</div>-->
-          <div><strong>name:</strong> {{ comment.name }}</div>
-          <div><strong>email:</strong> {{ comment.email }}</div>
-          <div><strong>body:</strong> {{ comment.body }}</div>
+          <single-comment
+              :comment="comment"/>
+
+<!--          <div><strong>name:</strong> {{ comment.name }}</div>-->
+<!--          <div><strong>email:</strong> {{ comment.email }}</div>-->
+<!--          <div><strong>body:</strong> {{ comment.body }}</div>-->
+
         </div>
+
       </div>
 
     </div>
@@ -21,8 +26,12 @@
 
 <script>
 // import axios from "axios";
+import SingleComment from "@/components/SinglePost/SingleComment";
 
 export default {
+  components: {
+    SingleComment
+  },
   props: {
     comments: {
       type: Object,
@@ -64,6 +73,9 @@ export default {
 .comments {
   padding: 15px;
   margin-top: 15px;
-  border: 1px solid gray;
+}
+
+.post-comments-h4 {
+  margin-top: 5px;
 }
 </style>

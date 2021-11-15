@@ -2,11 +2,7 @@
   <div class="post-comments">
 
     <div>
-      <div class="post-comments-h4">
-        <h4>
-          Comments
-        </h4>
-      </div>
+
         <div class="comments" v-for="comment in comments" :key="comment" >
 
           <single-comment
@@ -36,7 +32,7 @@ export default {
     comments: {
       type: Object,
       require: true,
-    }
+    },
     // id: {
     //   type: Number,
     //   require: true,
@@ -75,7 +71,9 @@ export default {
   margin-top: 15px;
 }
 
-.post-comments-h4 {
-  margin-top: 5px;
+.post-comments{
+  margin-top: -30px;
+  border-top: 1px solid darkgrey;
+
 }
 </style>

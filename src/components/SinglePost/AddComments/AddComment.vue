@@ -5,11 +5,9 @@
         <h4 class="comment"> Comment</h4>
       </div>
       <div class="add-comment-placeholder">
-        <my-input
-            required
+        <textarea
             class="comment-body"
             v-model="comment.body"
-            type="text"
         />
         <h4 class="comment"> Name *</h4>
         <my-input
@@ -27,8 +25,8 @@
         />
 
         <h4 class="comment"> WEBSITE </h4>
-        <my-input class="input-comment"
-
+        <my-input
+            class="input-comment"
             v-model="comment.website"
             type="text"
         />
@@ -92,7 +90,7 @@ export default {
   data() {
     return {
       comment: {
-        title: '',
+        name: '',
         body: '',
 
       }
@@ -103,7 +101,7 @@ export default {
       this.comment.id = Date.now();
       this.$emit('create', this.comment)
       this.comment = {
-        title: '',
+        name: '',
         body: '',
       }
     }
@@ -135,6 +133,7 @@ export default {
 }
 
 .input-comment {
+  margin-top: 1px;
 }
 .comment-body {
   width: 100%;

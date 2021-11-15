@@ -66,7 +66,7 @@
     </div>
 
     <div class="another-post">
-      <div class="left-post">
+      <div class="left-post" v-if="Number(this.$route.params.id) > 1">
         <router-link
             class="text-left-post"
             :to="`/enter-post/${beforePostId}`"
@@ -130,7 +130,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.not-published {
+  color: dimgrey;
+}
 .reply {
   text-align: center;
   margin-top: 100px;
@@ -154,15 +156,14 @@ export default {
 }
 
 .subscribe {
-  text-align: center;
   overflow: hidden;
   white-space: nowrap;
   height: 50px;
 }
 
 .place-for-email {
-  display: inline-block;
   height: 100%;
+  float: left;
 }
 
 .place-for-email-input {
@@ -177,8 +178,8 @@ export default {
 }
 
 .btn-subscribe {
-  display: inline-block;
   height: 100%;
+  float: left;
 
 }
 
@@ -195,6 +196,7 @@ export default {
   box-sizing: border-box;
 
 }
+
 
 .info-after-post {
   width: 600px;

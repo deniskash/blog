@@ -31,8 +31,7 @@
     >
     </post-list>
 
-
-
+    <footer-type></footer-type>
   </div>
 </template>
 
@@ -40,15 +39,17 @@
 <script>
 
 import PostList from "@/components/PostList";
-
 import axios from 'axios';
+import FooterType from "@/components/FooterType";
 // import MainPhoto from "@/components/MainPhotos";
+
 
 
 export default {
   components: {
     // MainPhoto,
     PostList,
+    FooterType,
   },
   name: 'MainList',
   data() {

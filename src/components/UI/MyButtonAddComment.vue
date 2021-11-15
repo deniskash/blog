@@ -15,7 +15,7 @@ export default {
 <style scoped>
 
 .btn {
-  height: 80%;
+  height: 100%;
   cursor: pointer;
   background: repeating-linear-gradient(45deg, #f0f1f4, #f0f1f4 1px, white 1px, white 6px);
   text-transform: uppercase;

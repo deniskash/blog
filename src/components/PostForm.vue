@@ -25,6 +25,7 @@
 <script>
 import MyButton from "@/components/UI/MyButton";
 import MyInput from "@/components/UI/MyInput";
+
 export default {
   components: {
     MyInput,
@@ -35,7 +36,7 @@ export default {
     return {
       post: {
         title: '',
-        body:'',
+        body: '',
       }
     }
   },
@@ -44,8 +45,8 @@ export default {
       this.post.id = Date.now();
       this.$emit('create', this.post)
       this.post = {
-        title:'',
-        body:'',
+        title: '',
+        body: '',
       }
     }
   }

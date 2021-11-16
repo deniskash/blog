@@ -27,12 +27,12 @@
 
     <div class="main-info-text-level-one">
         <span class="info-text-one">See more:
-          <router-link to="/post-list-ver-2">APPLE</router-link>,
-          <router-link to="/post-list-ver-2">Cake</router-link>,
-          <router-link to="/post-list-ver-2">EveryDay</router-link>,
-          <router-link to="/post-list-ver-2">Cakes</router-link>,
-          <router-link to="/post-list-ver-2">Fall</router-link>,
-          <router-link to="/post-list-ver-2">Recipes</router-link>
+          <router-link class="info-text-link" to="/post-list-ver-2">APPLE</router-link>,
+          <router-link class="info-text-link" to="/post-list-ver-2">Cake</router-link>,
+          <router-link class="info-text-link" to="/post-list-ver-2">EveryDay</router-link>,
+          <router-link class="info-text-link" to="/post-list-ver-2">Cakes</router-link>,
+          <router-link class="info-text-link" to="/post-list-ver-2">Fall</router-link>,
+          <router-link class="info-text-link" to="/post-list-ver-2">Recipes</router-link>
         </span>
     </div>
 
@@ -66,7 +66,7 @@
     </div>
 
     <div class="another-post">
-      <div class="left-post">
+      <div class="left-post" v-if="Number(this.$route.params.id) > 1">
         <router-link
             class="text-left-post"
             :to="`/enter-post/${beforePostId}`"
@@ -80,7 +80,7 @@
             class="text-right-post"
             :to="`/enter-post/${nextPostId}`"
         >
-          right-post
+          right post
         </router-link>
       </div>
 
@@ -130,13 +130,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+
+.not-published {
+  color: dimgrey;
+}
 
 .reply {
   text-align: center;
   margin-top: 100px;
+
   h2 {
-    font-family: madre-script-1, madre-script, "Madre Script", "Open Sans", Arial, sans-serif;
-    color: slategray;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    font-weight: 400;
+    color: darkgray;
+    letter-spacing: 1px;
   }
 }
 
@@ -144,72 +154,78 @@ export default {
   display: flex;
   font-size: smaller;
   margin-top: 25px;
-  .right-post{
+
+  .right-post {
     margin-left: auto;
   }
+}
+
+.another-post:hover {
+  color: indianred;
 }
 
 .icon {
   color: slategray;
 }
 
+.icon:hover {
+  color: indianred;
+}
+
 .subscribe {
-  text-align: center;
   overflow: hidden;
-  white-space: nowrap;
-  height: 50px;
+  margin-left: 20px;
 }
 
 .place-for-email {
-  display: inline-block;
   height: 100%;
+  float: left;
 }
 
 .place-for-email-input {
-  font-size: unset;
-  height: 100%;
-  width: 300px;
+  width: 400px;
   color: #50565a;
-  padding: 0.5em;
   border: 1px solid #939a9f;
   margin-right: 10px;
-
+  height: 45px;
+  padding: 0.65rem 0.7rem;
 }
 
 .btn-subscribe {
-  display: inline-block;
-  height: 100%;
+  float: left;
 
+  :hover {
+    color: indianred;
+    background: repeating-linear-gradient(45deg, indianred 1px, white 1px, white 6px);
+    border: 1px solid indianred;
+  }
 }
 
 .btn-sub {
-  height: 100%;
   cursor: pointer;
   background: repeating-linear-gradient(45deg, #f0f1f4, #f0f1f4 1px, white 1px, white 6px);
   text-transform: uppercase;
   border: 1px solid #a6adbf;
   color: #6B7794;
   font-weight: bold;
-  padding: 15px;
   width: 150px;
   box-sizing: border-box;
-
+  height: 45px;
 }
+
 
 .info-after-post {
   width: 600px;
-}
-
-.info-after-post-photos {
-  align-items: start;
 }
 
 .like-post {
   text-align: center;
 
   h2 {
-    font-family: madre-script-1, madre-script, "Madre Script", "Open Sans", Arial, sans-serif;
-    color: slategray;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    color: darkgray;
+    letter-spacing: 1px;
   }
 }
 
@@ -230,10 +246,21 @@ export default {
 }
 
 .info-text-one {
+  display: inline-block;
   border-top: 1px dashed #d2d6de;
+  width: 600px;
   text-transform: uppercase;
   font-size: smaller;
   padding: 16px 0;
+}
+
+.info-text-link {
+  letter-spacing: 1px;
+  font-size: small;
+}
+
+.info-text-link:hover {
+  color: indianred;
 }
 
 .info-after-post-offer {
@@ -247,20 +274,19 @@ export default {
 }
 
 .info-after-post-photoMain {
-  display: table;
-  align-items: start;
-  width: 200px;
+  width: 194px;
   margin-right: 10px;
   /*height: 100px;*/
 }
 
 .info-after-post-photos {
+  align-items: center;
 }
 
 
 .info-after-post-photo {
-  align-items: start;
   display: table-cell;
+  cursor: pointer;
 }
 
 .info-after-post-photo-text {
@@ -268,5 +294,30 @@ export default {
   margin-top: unset;
   color: firebrick;
   font-size: smaller;
+}
+
+.info-after-post-photo-text:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.text-left-post {
+  letter-spacing: normal;
+  font-size: small;
+  color: #6B7794;
+}
+
+.text-left-post:hover {
+  color: indianred;
+}
+
+.text-right-post {
+  letter-spacing: normal;
+  font-size: small;
+  color: #6B7794;
+}
+
+.text-right-post:hover {
+  color: indianred;
 }
 </style>

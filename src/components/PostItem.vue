@@ -6,46 +6,29 @@
             class="main-photo-list-img"
             src="https://via.placeholder.com/600/92c952"
             alt="MainPhoto in post">
+        <span class="smittenkitchen-primary-category">Recipes</span>
       </div>
-      </div>
+    </div>
 
 
     <div class="post">
-       <div class="info-id-main">
-<!--        <div class="info-id">{{ post.id }}</div>-->
+      <div class="info-id-main">
 
-          <div
-              class="info-id-tittle"
-              @click="$router.push(`/enter-post/${post.id}`)"
-          >
-            {{ post.title }}
-          </div>
-
-          <div
-              class="info-id-body"
-          >
-            {{ post.body }}
-          </div>
+        <div
+            class="info-id-tittle"
+            @click="$router.push(`/enter-post/${post.id}`)"
+        >
+          {{ post.title }}
         </div>
+
+        <div
+            class="info-id-body"
+        >
+          {{ post.body }}
+        </div>
+      </div>
       <div>
 
-
-
-<!--        <div class="post__btns">-->
-<!--          <my-button-->
-<!--             @click="$router.push(`/enter-post/${post.id}`)"-->
-<!--          >-->
-<!--            Enter Post-->
-<!--          </my-button>-->
-<!--        </div>-->
-<!--        <div class="post__btns">-->
-
-<!--          <my-button-->
-<!--              @click="$emit('remove', post)"-->
-<!--          >-->
-<!--            Delete-->
-<!--          </my-button>-->
-<!--        </div>-->
       </div>
     </div>
 
@@ -62,7 +45,7 @@
       <div class="post-item-read-tags">
         <b>OCTOBER 14, 2021</b> 552 COMMENTSCASSEROLE,
         FALL, PASTA, RECIPES, SAVORY PROJECTS,
-          SPINACH, VEGETARIAN, WINTER SQUASH
+        SPINACH, VEGETARIAN, WINTER SQUASH
       </div>
     </div>
 
@@ -70,11 +53,8 @@
 </template>
 <script>
 
-// import MyButton from "@/components/UI/MyButton";
 export default {
-  components: {
-    // MyButton
-  },
+  components: {},
   props: {
     post: {
       type: Object,
@@ -85,19 +65,21 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .main-photo-list-img {
   cursor: pointer;
 
 }
+
 .post-item-read-more {
-  width: 600px;
-  text-align: start;
   color: firebrick;
+  font-weight: 500;
   font-size: small;
   cursor: pointer;
 
 }
+
 .post-item-read-tags {
   border-top: 1px dashed #d2d6de;
   width: 600px;
@@ -107,7 +89,7 @@ export default {
   text-align: start;
   font-size: small;
   padding: 16px 0;
-  font-family: franklin-gothic-urw-1, franklin-gothic-urw, "FranklinGothic URW", "Open Sans", Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 .post-item-main-photo {
@@ -116,15 +98,19 @@ export default {
 }
 
 .info-id-tittle {
-  vertical-align: inherit;
-  text-align: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: 'Libre Franklin', sans-serif;
   font-size: xx-large;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   color: slategray;
   margin-top: -30px;
   width: 600px;
 }
+
 .info-id-body {
   text-align: start;
   color: gray;
@@ -136,7 +122,6 @@ export default {
 .info-id {
   text-align: start;
   font-weight: bold
-
 }
 
 .info-id-main {
@@ -152,5 +137,18 @@ export default {
 .post__btns {
   display: inline-block;
   margin-right: 5px;
+}
+
+.smittenkitchen-primary-category {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #6B7794;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 4px 12px;
+  position: absolute;
+  right: 700px;
 }
 </style>

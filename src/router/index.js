@@ -17,11 +17,28 @@ import Twitter from "@/assets/Icons/Twitter";
 import Facebook from "@/assets/Icons/Facebook";
 import Print from "@/assets/Icons/Print";
 import Pinterest from "@/assets/Icons/Pinterest";
+import IMadeThis from "@/components/SinglePost/IMadeThis";
+import Questions from "@/components/SinglePost/Questions";
+import FooterType from "@/components/FooterType";
 
 
 
 const routes = [
-
+  {
+    path: '/footer-type',
+    name: 'FooterType',
+    component: FooterType
+  },
+  {
+    path: '/i-made-this',
+    name: 'IMadeThis',
+    component: IMadeThis
+  },
+  {
+    path: '/question',
+    name: 'Questions',
+    component: Questions
+  },
   {
     path: '/twitter',
     name: 'Twitter',

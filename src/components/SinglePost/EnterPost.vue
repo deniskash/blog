@@ -8,6 +8,7 @@
             :photos="photos"
         >
         </post-photo>
+        <span class="smittenkitchen-primary-category">Recipes</span>
       </div>
 
       <div class="enter-post-body-post">
@@ -33,6 +34,7 @@
         </span>
         <h2>
           <title-body-post
+              class="calc-comments-title"
               :posts="posts"
           >
           </title-body-post>
@@ -69,7 +71,6 @@
 <script>
 
 import axios from "axios";
-
 import PostPhoto from "@/components/SinglePost/PostPhoto";
 import BodyPost from "@/components/SinglePost/BodyPost";
 import PostComments from "@/components/SinglePost/PostComments";
@@ -80,6 +81,7 @@ import Questions from "@/components/SinglePost/Questions";
 import FooterType from "@/components/FooterType";
 
 export default {
+
   name: "EnterPost",
   components: {
     InfoAfterPost,
@@ -104,7 +106,7 @@ export default {
       comments: [],
       body_post: [],
       posts: [],
-      question:[],
+      question: [],
       visible1: true,
       visible2: false,
     }
@@ -127,7 +129,7 @@ export default {
       this.fetchComments(this.id)
       this.fetchBodyPost(this.id)
       this.fetchPosts(this.id)
-      this.fetchQuestion(this.id+1)
+      this.fetchQuestion(this.id + 1)
     },
 
 
@@ -180,8 +182,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.comments-and-questions {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
 
+
+.comments-and-questions {
+}
+
+.smittenkitchen-primary-category {
+  margin-left: 67px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #6B7794;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 4px 12px;
+  position: absolute;
+  top: 230px;
+  left: -6px;
+  z-index: 100;
+}
+
+.calc-comments-title {
+  margin-top: -25px;
+  font-size: 40px;
+  text-transform: lowercase;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  color: darkgray;
+  letter-spacing: 1px;
 }
 
 .button-comments {
@@ -195,12 +225,17 @@ export default {
   text-transform: uppercase;
   margin-right: 3px;
   margin-bottom: -1px;
-
 }
+
+.button-comments:hover {
+  color: indianred;
+}
+
 .calc-comments {
+  margin-top: 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #50565a;
+  color: #6B7794;
 }
 
 @import "./style/style.scss";

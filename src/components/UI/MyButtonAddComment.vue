@@ -25,8 +25,13 @@ export default {
   padding: 15px;
   width: 200px;
   box-sizing: border-box;
-  margin-top: 5px;
-}
+  margin-top: 5px;}
+
+  .btn:hover {
+  color: indianred;
+  background: repeating-linear-gradient(45deg, indianred 1px, white 1px, white 6px);
+  border: 1px solid indianred;
+  }
 
 
 

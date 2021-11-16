@@ -115,7 +115,7 @@ export default {
   margin-bottom: 30px;
 }
 
-.question-check-out{
+.question-check-out {
   margin-top: 20px;
   margin-bottom: 8px;
   padding: 4px;
@@ -126,6 +126,7 @@ export default {
 .input-checkbox {
   display: block;
 }
+
 .checkbox {
   margin-top: 20px;
   font-size: smaller;
@@ -135,6 +136,7 @@ export default {
 .input-comment {
   margin-top: 1px;
 }
+
 .comment-body {
   width: 100%;
   height: 200px;

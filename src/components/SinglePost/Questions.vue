@@ -3,7 +3,7 @@
   <div class="post-comments">
 
     <div>
-      <div class="comments" v-for="question in question" :key="question" >
+      <div class="comments" v-for="question in question" :key="question">
 
         <div>
           <strong>name:</strong> {{ question.name }}

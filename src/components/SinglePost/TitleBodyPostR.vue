@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    {{posts.title}}
+    {{ posts.title }}
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   methods: {
     async fetchPosts() {
       try {
-        const id = this.$route.params.id +1;
+        const id = this.$route.params.id + 1;
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
         this.posts = response.data;
       } catch (e) {

@@ -1,33 +1,32 @@
 <template>
-<div class="post-list-ver-2">
+  <div class="post-list-ver-2">
 
-  <div>
-    <div
-        class="main-photo-list"
-        v-for="main_photo in main_photos"
-        :key="main_photo"
-    >
+    <div>
+      <div
+          class="main-photo-list"
+          v-for="main_photo in main_photos"
+          :key="main_photo"
+      >
 
-      <img
-          class="main-photo-list-img"
-          :src="main_photo.url"
-          alt="MainPhoto in post">
+        <img
+            class="main-photo-list-img"
+            :src="main_photo.url"
+            alt="MainPhoto in post">
+      </div>
     </div>
-  </div>
 
-  <div>
-    <div
-        class="main-posts-list"
-        v-for="post in posts"
-        :key="post"
-    >
-      {{ post.body }}
+    <div>
+      <div
+          class="main-posts-list"
+          v-for="post in posts"
+          :key="post"
+      >
+        {{ post.body }}
+      </div>
     </div>
+
+
   </div>
-
-
-
-</div>
 </template>
 
 <script>
@@ -36,14 +35,6 @@ import axios from 'axios';
 
 
 export default {
-  components: {
-  },
-  // props: {
-  //   id: {
-  //     type: Number,
-  //     require: true,
-  //   }
-  // },
   name: 'PostsListVer2',
   data() {
     return {
@@ -54,8 +45,6 @@ export default {
         main_photos: [],
         posts: [],
       },
-
-
     }
   },
 

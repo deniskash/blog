@@ -1,21 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
   box-sizing: border-box;
 }
 
 .enter-post {
   width: 600px;
+  margin-left: 67px;
+
 }
+
 .enter-post-add-comment {
   font-weight: normal;
   text-align: start;
-  font-family: sans-serif;
-  padding: 15px;
-  //border: 1px solid gray;
-  width:50%;
-  //border-style: outset;
-  //margin-top: 40px;
+  font-family: 'Libre Franklin', sans-serif;
+  width: 50%;
+
 }
+
 .body-post {
   .body-post-title {
     vertical-align: inherit;
@@ -27,6 +29,7 @@
     margin-top: -30 px;
     width: 600px;
   }
+
   .body-post-small-info {
     text-align: start;
     font-size: small;
@@ -37,9 +40,10 @@
 
   .body-post-body {
     text-align: start;
-    color: grey;
+    color: #50565b;
     margin-top: 20px;
     font-size: medium;
+    font-weight: 400;
     width: 600px;
     line-height: 1.4;
   }
@@ -50,38 +54,51 @@
 
 .enter-post-body-post {
   margin-top: 30px;
-  font-family: sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: x-large;
 }
+
 .enter-post-comments {
   margin-top: 30px;
-  font-family: sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   text-align: start;
   /*border: 1px solid gray;*/
 }
 
 a:-webkit-any-link {
-  color: dimgrey;
+  color: #939a9f;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   padding-left: 4px;
 }
+
 .router-link:after {
   content: "\00B7";
 }
-.router-link{
-  font-family: sans-serif;
+
+.router-link {
+  font-weight: 600;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.router-link:hover {
+  color: indianred;
 }
 
 .tag:after {
   content: "\00B7";
 }
+
 .app-links {
+  margin-left: 120px;
   text-align: center;
 }
 
 .img-logo {
-  width: 30%;
+  width: 25%;
 
 }
 

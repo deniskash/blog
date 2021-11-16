@@ -24,8 +24,7 @@ import axios from 'axios';
 
 
 export default {
-  components: {
-  },
+  components: {},
   props: {
     id: {
       type: Number,
